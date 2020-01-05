@@ -1,7 +1,7 @@
 # K8s-for-datascience
-To keep K8s related code for data science meetup and conference
 
-# Requirements for this exercise to work
+# Requirements for this exercise to have working Docker and Kubernetes setup, For local setup refer below details
+
 Docker https://www.docker.com/products/docker-desktop 
 
 Minikube https://kubernetes.io/docs/tasks/tools/install-minikube/
