@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: dlc-persistent-volume-claim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dlc-tf
+spec:
+  containers:
+  - name: dlc-tf
+    image: gcr.io/deeplearning-platform-release/tf2-cpu.2-0
+    resources:
+    volumeMounts:
+      - name: dlc-volume
+        mountPath: /home
+  volumes:
+  - name: dlc-volume
+    persistentVolumeClaim:
+      claimName: dlc-persistent-volume-claim
+      
