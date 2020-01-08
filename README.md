@@ -9,7 +9,7 @@ Minikube https://kubernetes.io/docs/tasks/tools/install-minikube/
 # The entire exercise has been broken into 4 parts
 ## Docker
  - Once cloned the repo, cd k8s-for-datascience/docker
- - `docker run -d -p 8080:8080 -v `pwd`:/home gcr.io/deeplearning-platform-release/tf2-cpu.2-0`
+ - ``docker run -d -p 8080:8080 -v `pwd`:/home gcr.io/deeplearning-platform-release/tf2-cpu.2-0``
  - Access the notebook on localhost:8080 and Run all the notebook steps
  - For extending image check Dockerfile and build the image with any other name
  - For verification purpose we will use already uploaded image kduhan/tf2-mxnet-custom as image is very large
